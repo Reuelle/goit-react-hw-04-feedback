@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Statistics } from "./Statistics/Statistics";
 import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Notification } from "./Notification/Notification";
@@ -23,17 +24,16 @@ export function App() {
     return good + neutral + bad;
   };
 
-  const total = countTotalFeedback();
-
   const countPositiveFeedbackPercentage = () => {
     const { good } = state;
+    const total = countTotalFeedback();
     return total ? ((good / total) * 100).toFixed() : 0;
   };
 
-  const positivePercentage = countPositiveFeedbackPercentage();
-
   const options = ['good', 'neutral', 'bad'];
   const { good, neutral, bad } = state;
+  const total = countTotalFeedback();
+  const positivePercentage = countPositiveFeedbackPercentage();
 
   return (
     <div className="container">
