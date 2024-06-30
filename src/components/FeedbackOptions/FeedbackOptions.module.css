@@ -1,1 +1,22 @@
-
+.feedBack_container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0 60px 0 60px;
+}
+.feedback_btn {
+    width: 65px;
+    margin-left: 35px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    background-color: white;
+    color: rgb(107, 88, 48);
+    transition: all 800ms;
+}
+.feedback_btn:hover {
+    background-color: rgb(140, 143, 143);
+    color: wheat;
+}
